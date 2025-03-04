@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:smart_rob/core/constants/text_string.dart';
+import 'package:smart_rob/screens/pre_signup_screen.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 import '../core/constants/colors.dart';
@@ -113,19 +114,30 @@ class _OnbardingScreensState extends State<OnbardingScreens> {
                   child: Column(
                     children: [
                       ///create account button
-                      Container(
-                        height: 50,
-                        decoration: BoxDecoration(
-                            color: kcWhite,
-                            borderRadius: BorderRadius.circular(12)),
-                        child: Center(
-                          child: Text(
-                            ksCreateAccount,
-                            style: ktsAuthButtonTextStyle,
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const PreSignupScreen(),
+                            ),
+                          );
+                        },
+                        child: Container(
+                          height: 50,
+                          decoration: BoxDecoration(
+                              color: kcWhite,
+                              borderRadius: BorderRadius.circular(12)),
+                          child: Center(
+                            child: Text(
+                              ksCreateAccount,
+                              style: ktsAuthButtonTextStyle,
+                            ),
                           ),
                         ),
                       ),
                       const SizedBox(height: 10),
+
                       ///sign in button
                       Container(
                         height: 50,

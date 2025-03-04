@@ -22,8 +22,30 @@ const ksSignUp = 'Sign Up';
 const ksBack = 'Back';
 const ksCreateAccount= 'Create an account';
 
-const ksConfirmPassword = 'Confirm Password';
+const ksSelectYourCountry= 'Selecte your country';
+const ksSearchCountry = 'Search Country';
 const ksContinue = 'Continue';
-const ksConfirmNewPassword = 'Confirm New Password';
-const ksChangePassword = 'Change Password';
-const ksCurrentPassword = 'Current Password';
+
+const ksLetGetYouStarted = "Let's get you Started";
+const ksEnterYourDetails = "Enter your details and create a password to set up your account";
+
+
+const ksBasicInfo = 'Basic info';
+const ksUsername = 'Username';
+const ksPassword = 'Password';
+const ksFirstName = 'First Name';
+const ksLastName = 'Last Name';
+const ksEmailAddress = 'Email Address';
+const ksPhoneNumber = 'Phone Number';
+const ksGoHome = 'Go to Home';
+
+
+const ksYourPreferusername= 'Your Preferred Username';
+const ksReferralCode= 'Referral code';
+const ksUserNameHint = '@username';
+const ksOptional= 'Optional';
+const ksCreatePassword= 'Create Passord';
+const ksConfirmPassword = 'Confirm Password';
+const ksMustbeatLeast = 'Must be at least 8 charaters';
+const ksAccountCreated = 'Account Created';
+const ksSuccessAccountCreationMsg = 'Congratulations! Your Niklaar account has \nsuccessfully been created.';
