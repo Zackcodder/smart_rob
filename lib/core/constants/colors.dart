@@ -7,10 +7,13 @@ const kcWhite = Color(0xffFFFFFF);
 const kcDeepBlue = Color(0xff1F3669);
 const kcLightBlue = Color(0xff009EEA);
 
-const kcDeepBlack = Color(0xff131313);
+///black
+const kcDeepBlack = Color(0xff1E1E1E);
 const kcBlack = Color(0xff000000);
+
+///grey
 const kcGrey = Color(0xff989898);
-const kcLightGrey = Color(0xffA7A7A7);
+const kcLightGrey = Color(0xffDADADA);
 const kcPink = Color(0xffDC157B);
 const kcYellow = Color(0xffC79F47);
 const kcLightPink = Color(0xffFDECF5);
