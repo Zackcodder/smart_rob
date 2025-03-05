@@ -144,7 +144,6 @@ class _OnbardingScreensState extends State<OnbardingScreens> {
                         height: 50,
                         decoration: BoxDecoration(
                             color: kcDeepBlue,
-                            border: Border.all(color: kcWhite),
                             borderRadius: BorderRadius.circular(12)),
                         child: Center(
                           child: Text(
