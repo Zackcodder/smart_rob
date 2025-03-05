@@ -1,5 +1,5 @@
 import 'dart:convert';
-import 'package:http/http.dart' as http;
+import 'package:http/http.dart' as https;
 
 class AuthService {
   final String baseUrl = 'https://api.paypointapp.africa/api';
@@ -12,7 +12,7 @@ class AuthService {
     required String email,
   }) async {
     try {
-      final response = await http.post(
+      final response = await https.post(
         Uri.parse('$baseUrl/auth/register/step-one'),
         body: {
           'first_name': firstName,
@@ -45,7 +45,7 @@ class AuthService {
     String? referral,
   }) async {
     try {
-      final response = await http.post(
+      final response = await https.post(
         Uri.parse('$baseUrl/auth/register/profile_level_1'),
         headers: {
           'Authorization': 'Bearer $token',
@@ -72,7 +72,7 @@ class AuthService {
   }
 
   ///Extract error messages from the response
-  String _getErrorMessage(http.Response response) {
+  String _getErrorMessage(https.Response response) {
     try {
       final decoded = jsonDecode(response.body);
       if (decoded.containsKey('message')) {
