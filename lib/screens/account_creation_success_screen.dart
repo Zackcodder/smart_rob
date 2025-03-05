@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:smart_rob/core/constants/text_string.dart';
+import 'package:smart_rob/screens/onbarding_screens.dart';
 
 import '../core/constants/colors.dart';
 import '../core/constants/text_style.dart';
@@ -40,7 +41,14 @@ class AccountCreationSuccessScreen extends StatelessWidget {
             ),
             Spacer(),
             GestureDetector(
-              onTap: null,
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const OnbardingScreens(),
+                  ),
+                );
+              },
               child: Container(
                 height: 50,
                 decoration: BoxDecoration(

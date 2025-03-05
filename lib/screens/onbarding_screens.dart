@@ -95,7 +95,8 @@ class _OnbardingScreensState extends State<OnbardingScreens> {
                 height: 20,
               ),
 
-              ///page indicator
+              ///page 
+              if (_currentPage  < 4)
               SmoothPageIndicator(
                 controller: _controller,
                 count: onboardingData.length,

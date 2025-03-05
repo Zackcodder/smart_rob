@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:smart_rob/core/constants/text_style.dart';
 
 class FormFieldWidget extends StatefulWidget {
@@ -6,19 +7,25 @@ class FormFieldWidget extends StatefulWidget {
   final String labelText;
   final String hintText;
   final Color borderColor;
+  final Widget? suffixIcon;
   final double height;
-  final TextInputType keyboardType;
+  final TextInputType? keyboardType;
   final bool obscureText;
+  final String? Function(String?)? validator;
+  final List<TextInputFormatter>? inputFormatters;
 
   const FormFieldWidget({
     super.key,
     this.controller,
+      this.suffixIcon,
     required this.labelText,
-    this.keyboardType = TextInputType.text,
+    this.keyboardType,
     this.obscureText = false, // Useful for passwords
     this.hintText = '',
     this.borderColor = Colors.grey,
     this.height = 41,
+    this.inputFormatters,
+    this.validator,
   });
 
   @override
@@ -42,14 +49,17 @@ class _FormFieldWidgetState extends State<FormFieldWidget> {
             ),
             child: TextFormField(
               onChanged: (value) {
-                setState(() {
-                  
-                });
+                setState(() {});
               },
               controller: widget.controller,
+              inputFormatters: widget.inputFormatters,
+              validator: widget.validator,
+              keyboardType: widget.keyboardType,
+              obscureText: widget.obscureText,
               decoration: InputDecoration(
                 hintText: widget.hintText,
                 hintStyle: ktsTextFieldHint,
+            suffixIcon: widget.suffixIcon,
                 contentPadding: EdgeInsets.symmetric(horizontal: 10),
                 border: InputBorder.none,
               ),

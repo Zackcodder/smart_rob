@@ -49,7 +49,7 @@ class _SignupScreenState extends State<SignupScreen> {
     return Scaffold(
       body: Container(
         margin: EdgeInsets.symmetric(horizontal: 20, vertical: 40),
-        child: Column(
+        child: ListView(
           children: [
             ///header with back button, signin buttn n logo
             Row(
@@ -93,9 +93,12 @@ class _SignupScreenState extends State<SignupScreen> {
             ),
 
             ///lets get you started
-            Text(
-              ksLetGetYouStarted,
-              style: ktsSelectCountryHeader,
+            Align(
+              alignment: AlignmentDirectional.center,
+              child: Text(
+                ksLetGetYouStarted,
+                style: ktsSelectCountryHeader,
+              ),
             ),
             SizedBox(
               height: 20,
@@ -113,25 +116,25 @@ class _SignupScreenState extends State<SignupScreen> {
             ),
 
             buildStepContent(),
-            Spacer(),
-            GestureDetector(
-              onTap: nextStep,
-              child: Container(
-                height: 50,
-                decoration: BoxDecoration(
-                    color: kcDeepBlue,
-                    // _countryController.text.isEmpty
-                    //     ? kcLightBlue.withOpacity(0.3)
-                    //     : kcDeepBlue,
-                    borderRadius: BorderRadius.circular(12)),
-                child: Center(
-                  child: Text(
-                    currentStep == 2 ? ksCreateAccount : ksContinue,
-                    style: ktsAuthButtonTextStyle.copyWith(color: kcWhite),
-                  ),
-                ),
-              ),
-            ),
+            // Spacer(),
+            // GestureDetector(
+            //   onTap: nextStep,
+            //   child: Container(
+            //     height: 50,
+            //     decoration: BoxDecoration(
+            //         color: 
+            //        currentStep == 2
+            //             ? kcDeepBlue.withOpacity(0.3)
+            //             : kcLightBlue,
+            //         borderRadius: BorderRadius.circular(12)),
+            //     child: Center(
+            //       child: Text(
+            //         currentStep == 2 ? ksCreateAccount : ksContinue,
+            //         style: ktsAuthButtonTextStyle.copyWith(color: kcWhite),
+            //       ),
+            //     ),
+            //   ),
+            // ),
           ],
         ),
       ),
