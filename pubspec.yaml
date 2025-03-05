@@ -37,6 +37,7 @@ dependencies:
   smooth_page_indicator: ^1.2.1
   provider: ^6.1.2
   country_picker: ^2.0.27
+  http: ^0.13.5
 
 dev_dependencies:
   flutter_test:

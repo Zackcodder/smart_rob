@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:smart_rob/core/constants/colors.dart';
+import 'package:smart_rob/providers/authentication_provider.dart';
 
-import 'providers/country_provider.dart';
 import 'screens/onbarding_screens.dart';
 
 void main() {
   runApp(
     MultiProvider(
       providers: [
-        ChangeNotifierProvider(create: (context) => CountryProvider()),
+        ChangeNotifierProvider(create: (context) => AuthProvider()),
       ],
       child: MyApp(),
     ),);
